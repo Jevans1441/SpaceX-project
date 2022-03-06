@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Jevans1441/SpaceX-project#readme",
   "dependencies": {
-    "dot-env": "0.0.1",
+    "dotenv": "^16.0.0",
     "express": "^4.17.3"
   },
   "devDependencies": {
