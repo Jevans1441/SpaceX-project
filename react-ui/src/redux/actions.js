@@ -21,5 +21,7 @@ export const getRockets = () => {
         console.log("Unable to Fetch");
       }
     };
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 };

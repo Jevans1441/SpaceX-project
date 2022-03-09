@@ -1,3 +1,4 @@
 import { combineReducers } from "redux";
+import rocket from "./rocket";
 
-export default combineReducers({});
+export default combineReducers({ rocket });

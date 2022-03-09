@@ -1,7 +1,13 @@
-import "./App.css";
+import { Footer, Header, Main } from "./sectioning";
 
-function App() {
-  return <div>Hello</div>;
-}
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
+  );
+};
 
 export default App;
