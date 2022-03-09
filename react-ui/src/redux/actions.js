@@ -1,27 +1,16 @@
 import { GET_ROCKETS } from "./actionTypes";
 
-const ROCKET = "https://api.spacexdata.com/v4/rockets";
+export const getRockets = () => (dispatch) => {
+  fetch("https://api.spacexdata.com/v4/rockets")
+    .then((data) => data.json())
+    .then((response) => {
+      dispatch(fetchSuccess(response.rockets));
+    });
+};
 
-export const getRockets = () => {
-  try {
-    return async (dispatch) => {
-      const result = await fetch(ROCKET, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const json = await result.json();
-      if (json) {
-        dispatch({
-          type: GET_ROCKETS,
-          payload: json,
-        });
-      } else {
-        console.log("Unable to Fetch");
-      }
-    };
-  } catch (error) {
-    console.log(error);
-  }
+const fetchSuccess = (rocket) => {
+  return {
+    type: GET_ROCKETS,
+    rocket,
+  };
 };
