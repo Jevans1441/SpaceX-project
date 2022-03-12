@@ -9,7 +9,13 @@ const Crew = () => {
   return (
     <>
       {
-        <ImageList className="rocketImages" sx={{ width: 800 }}>
+        <ImageList
+          style={{
+            margin: "auto",
+            width: "50%",
+            height: "89vh",
+          }}
+        >
           {crewData.length &&
             crewData.map((crew) => (
               <ImageListItem key={crew.id}>
@@ -19,7 +25,11 @@ const Crew = () => {
                   alt={crew.name}
                   loading="lazy"
                 />
-                <ImageListItemBar title={crew.name} position="below" />
+                <ImageListItemBar
+                  style={{ textAlign: "center" }}
+                  title={crew.name}
+                  position="below"
+                />
               </ImageListItem>
             ))}
         </ImageList>

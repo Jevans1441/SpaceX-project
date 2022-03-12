@@ -9,7 +9,16 @@ const Rockets = () => {
   return (
     <>
       {
-        <ImageList className="rocketImages" sx={{ width: 800 }}>
+        <ImageList
+          style={{
+            margin: "auto",
+            width: "50%",
+            overflow: "hidden",
+            marginTop: "20px",
+            paddingBottom: "30px",
+            height: "88vh",
+          }}
+        >
           {rocketData.length &&
             rocketData.map((rocket) => (
               <ImageListItem key={rocket.id}>
@@ -19,7 +28,11 @@ const Rockets = () => {
                   alt={rocket.name}
                   loading="lazy"
                 />
-                <ImageListItemBar title={rocket.name} position="below" />
+                <ImageListItemBar
+                  style={{ textAlign: "center" }}
+                  title={rocket.name}
+                  position="below"
+                />
               </ImageListItem>
             ))}
         </ImageList>

@@ -37,7 +37,11 @@ const NavBar = () => {
 
   return (
     <AppBar
-      style={{ background: "#777", padding: "8px", width: "100%" }}
+      style={{
+        background: "#777",
+        width: "100%",
+        marginBottom: "15px",
+      }}
       position="static"
     >
       <Container maxWidth="xl">
@@ -110,7 +114,7 @@ const NavBar = () => {
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 <Link
-                  style={{ textDecoration: "none", color: "black" }}
+                  style={{ textDecoration: "none", color: "white" }}
                   to={`/${page}`}
                 >
                   {page}
@@ -119,7 +123,7 @@ const NavBar = () => {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -147,7 +151,7 @@ const NavBar = () => {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

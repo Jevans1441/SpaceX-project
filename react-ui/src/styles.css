@@ -1,16 +1,21 @@
+* {
+  margin: 0;
+  padding: 0rem;
+}
+
 footer {
   background-color: #777;
   color: #bbb;
-  padding: 20px;
-  position: static;
+  padding-top: 20px;
+  position: absolute;
   bottom: 0;
-  width: 98;
+  width: 100%;
+  margin-top: 10px;
 }
 
 
 main {
   flex-grow: 1;
-  padding: 30px 0;
 }
 
 body {
@@ -18,10 +23,11 @@ body {
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
-.rocketImages {
-    margin: auto;
-    width: 50%;
-    height: 80vh;
-    padding-top: 20px;
-}
 
+.home-background {
+  background-image: url(./images/spaceX-home.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+}

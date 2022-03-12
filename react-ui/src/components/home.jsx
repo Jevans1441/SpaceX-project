@@ -1,8 +1,11 @@
+import { useSelector } from "react-redux";
+
 const Home = () => {
   return (
     <>
-      <div className="App">Home Route</div>
+      <div>SpaceX</div>;
     </>
   );
 };
+
 export default Home;
