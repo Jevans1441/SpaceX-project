@@ -10,16 +10,16 @@ const Crew = () => {
     <>
       {
         <ImageList className="rocketImages" sx={{ width: 800 }}>
-          {rocketData.length &&
-            rocketData.map((rocket) => (
-              <ImageListItem key={rocket.id}>
+          {crewData.length &&
+            crewData.map((crew) => (
+              <ImageListItem key={crew.id}>
                 <img
-                  src={`${rocket.flickr_images[0]}?w=248&fit=crop&auto=format`}
-                  srcSet={`${rocket.flickr_images[0]}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                  alt={rocket.name}
+                  src={`${crew.image}?w=248&fit=crop&auto=format`}
+                  srcSet={`${crew.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                  alt={crew.name}
                   loading="lazy"
                 />
-                <ImageListItemBar title={rocket.name} position="below" />
+                <ImageListItemBar title={crew.name} position="below" />
               </ImageListItem>
             ))}
         </ImageList>
