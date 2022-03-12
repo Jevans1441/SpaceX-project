@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import { getRockets } from "../redux/actions";
 import Rockets from "../components/rocket";
+import { getCapsules } from "../redux/actions";
 
 const Landing = () => {
   const dispatch = useDispatch();
@@ -11,10 +12,15 @@ const Landing = () => {
     dispatch(getRockets());
   }, [dispatch]);
 
+  useEffect(() => {
+    dispatch(getCapsules())
+  }, [dispatch])
+
   
   return (
     <>
       <Rockets />
+      
     </>
   );
 };
