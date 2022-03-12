@@ -1,5 +1,5 @@
 import { GET_ROCKETS } from "./actionTypes";
-import { GET_CAPSULES } from "./actionTypes";
+import { GET_CREW } from "./actionTypes";
 
 export const getRockets = () => (dispatch) => {
   fetch("https://api.spacexdata.com/v4/rockets")
@@ -16,17 +16,17 @@ const fetchRockets = (rocket) => {
   };
 };
 
-export const getCapsules = () => (dispatch) => {
+export const getCrew = () => (dispatch) => {
   fetch("https://api.spacexdata.com/v4/capsules")
     .then((data) => data.json())
     .then((response) => {
-      dispatch(fetchCapsules(response));
+      dispatch(fetchCrew(response));
     });
 };
 
-const fetchCapsules = (capsules) => {
+const fetchCrew = (crew) => {
   return {
-    type: GET_CAPSULES,
-    capsules,
+    type: GET_CREW,
+    crew,
   };
 };

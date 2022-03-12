@@ -3,8 +3,8 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 
-const Rockets = () => {
-  const rocketData = useSelector((state) => state.rocket);
+const Crew = () => {
+  const crewData = useSelector((state) => state.crew);
 
   return (
     <>
@@ -27,5 +27,4 @@ const Rockets = () => {
     </>
   );
 };
-
-export default Rockets;
+export default Crew;
