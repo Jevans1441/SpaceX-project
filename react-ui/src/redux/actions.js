@@ -17,7 +17,7 @@ const fetchRockets = (rocket) => {
 };
 
 export const getCrew = () => (dispatch) => {
-  fetch("https://api.spacexdata.com/v4/capsules")
+  fetch("https://api.spacexdata.com/v4/crew")
     .then((data) => data.json())
     .then((response) => {
       dispatch(fetchCrew(response));
