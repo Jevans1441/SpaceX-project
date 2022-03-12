@@ -1,0 +1,25 @@
+footer {
+  background-color: #777;
+  color: #bbb;
+  padding: 20px;
+  position: static;
+  bottom: 0;
+  width: 98;
+}
+
+
+main {
+  flex-grow: 1;
+  padding: 30px 0;
+}
+
+body {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.rocketImages {
+    margin: auto;
+    width: 50%;
+    height: 80vh;
+}

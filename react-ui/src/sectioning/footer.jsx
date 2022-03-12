@@ -1,8 +1,7 @@
 const Footer = () => {
   return (
     <footer>
-          <div className="y-wrap">
-              Footer
+      <div className="y-wrap">
       </div>
     </footer>
   )

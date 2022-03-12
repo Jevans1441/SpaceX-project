@@ -1,9 +1,9 @@
+import Navbar from "../components/navbar";
+
 const Header = () => {
   return (
     <header>
-          <div className="y-wrap">
-              header
-      </div>
+      <Navbar />
     </header>
   )
 };
