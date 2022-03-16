@@ -31,7 +31,10 @@ const Crew = () => {
                 />
                 <a href={crew.wikipedia} className="crew-href">
                   <ImageListItemBar
-                    style={{ textAlign: "center", fontSize: "20px" }}
+                    style={{
+                      textAlign: "center",
+                      fontSize: "20px",
+                    }}
                     title={crew.name}
                     position="below"
                   />

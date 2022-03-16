@@ -12,11 +12,11 @@ const Dragons = () => {
       {
         <ImageList
           style={{
-            margin: "auto",
+            marginLeft: "auto",
+            marginRight: "auto",
             overflow: "hidden",
-            marginTop: "20px",
-            paddingBottom: "30px",
-            height: "88vh",
+            height: "85vh",
+            width: "80vw",
           }}
         >
           {dragonData.length &&
