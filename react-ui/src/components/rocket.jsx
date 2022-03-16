@@ -12,11 +12,10 @@ const Rockets = () => {
         <ImageList
           style={{
             margin: "auto",
-            width: "50%",
-            overflow: "hidden",
+            height: "80vh",
             marginTop: "20px",
-            paddingBottom: "30px",
-            height: "88vh",
+            padding: "30px",
+            width: "80vw",
           }}
         >
           {rocketData.length &&
@@ -29,7 +28,7 @@ const Rockets = () => {
                   loading="lazy"
                 />
                 <ImageListItemBar
-                  style={{ textAlign: "center" }}
+                  style={{ textAlign: "center", color: "white" }}
                   title={rocket.name}
                   position="below"
                 />

@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
+import { height } from "@mui/system";
 
 const Dragons = () => {
   const dragonData = useSelector((state) => state.dragon);
@@ -12,7 +13,6 @@ const Dragons = () => {
         <ImageList
           style={{
             margin: "auto",
-            width: "50%",
             overflow: "hidden",
             marginTop: "20px",
             paddingBottom: "30px",
@@ -29,7 +29,7 @@ const Dragons = () => {
                   loading="lazy"
                 />
                 <ImageListItemBar
-                  style={{ textAlign: "center" }}
+                  style={{ textAlign: "center", color: "white" }}
                   title={dragon.name}
                   position="below"
                 />

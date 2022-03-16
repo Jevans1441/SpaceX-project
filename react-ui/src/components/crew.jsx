@@ -12,8 +12,12 @@ const Crew = () => {
         <ImageList
           style={{
             margin: "auto",
-            width: "50%",
-            height: "89vh",
+            width: "60vh",
+            // overflow: "hidden",
+            marginTop: "20px",
+            paddingBottom: "30px",
+            height: "88vh",
+            textDecoration: "none",
           }}
         >
           {crewData.length &&
@@ -25,11 +29,13 @@ const Crew = () => {
                   alt={crew.name}
                   loading="lazy"
                 />
-                <ImageListItemBar
-                  style={{ textAlign: "center" }}
-                  title={crew.name}
-                  position="below"
-                />
+                <a href={crew.wikipedia} className="crew-href">
+                  <ImageListItemBar
+                    style={{ textAlign: "center", fontSize: "20px" }}
+                    title={crew.name}
+                    position="below"
+                  />
+                </a>
               </ImageListItem>
             ))}
         </ImageList>

@@ -4,8 +4,8 @@
 }
 
 footer {
-  background-color: #777;
-  color: #bbb;
+  background-color: #005288;
+  color: #005288;
   padding-top: 20px;
   position: absolute;
   bottom: 0;
@@ -29,5 +29,21 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  height: 100vh;
 
 }
+
+.crew-href {
+  text-decoration: none;
+  color: white;  
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  background-color:#005288;
+  border: 2px solid #A7A9AC;
+}
+
+/* .css-pxxd1-MuiImageListItem-root .MuiImageListItem-img {
+  position: relative;
+  height: 100%;
+} */

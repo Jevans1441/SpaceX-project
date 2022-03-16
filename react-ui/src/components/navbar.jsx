@@ -38,9 +38,10 @@ const NavBar = () => {
   return (
     <AppBar
       style={{
-        background: "#777",
+        background: "#005288",
         width: "100%",
         marginBottom: "15px",
+        color: "#A7A9AC",
       }}
       position="static"
     >
@@ -50,12 +51,19 @@ const NavBar = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+            sx={{
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+            }}
           >
             SpaceX
           </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -88,7 +96,10 @@ const NavBar = () => {
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
                     <Link
-                      style={{ textDecoration: "none", color: "black" }}
+                      style={{
+                        textDecoration: "none",
+                        color: "#A7A9AC",
+                      }}
                       to={`/${page}`}
                     >
                       {page}
@@ -106,15 +117,25 @@ const NavBar = () => {
           >
             SpaceX
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+            }}
+          >
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "#005288",
+                  display: "block",
+                  backgroundColor: "#005288",
+                }}
               >
                 <Link
-                  style={{ textDecoration: "none", color: "white" }}
+                  style={{ textDecoration: "none", color: "#A7A9AC" }}
                   to={`/${page}`}
                 >
                   {page}
@@ -122,7 +143,6 @@ const NavBar = () => {
               </Button>
             ))}
           </Box>
-
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
