@@ -2,7 +2,6 @@ import { useSelector } from "react-redux";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
-import { height } from "@mui/system";
 
 const Dragons = () => {
   const dragonData = useSelector((state) => state.dragon);
