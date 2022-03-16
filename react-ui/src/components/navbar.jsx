@@ -117,7 +117,9 @@ const NavBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            SpaceX
+            <Link to={`/`} style={{ textDecoration: "none", color: "#A7A9AC" }}>
+              SpaceX
+            </Link>
           </Typography>
           <Box
             sx={{
