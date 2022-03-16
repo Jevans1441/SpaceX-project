@@ -56,7 +56,9 @@ const NavBar = () => {
               display: { xs: "none", md: "flex" },
             }}
           >
-            SpaceX
+            <Link to={`/`} style={{ textDecoration: "none", color: "#A7A9AC" }}>
+              SpaceX
+            </Link>
           </Typography>
           <Box
             sx={{

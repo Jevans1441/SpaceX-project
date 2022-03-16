@@ -1,9 +1,7 @@
-import { useSelector } from "react-redux";
-
 const Home = () => {
   return (
     <>
-      <div>SpaceX</div>;
+      <div>SpaceX</div>
     </>
   );
 };
