@@ -11,16 +11,24 @@ const Dragons = () => {
       {
         <ImageList
           style={{
-            marginLeft: "auto",
-            marginRight: "auto",
             overflow: "hidden",
-            height: "85vh",
-            width: "80vw",
+            justifyContent: "center",
+            margin: "40px",
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            alignItems: "center",
           }}
         >
           {dragonData.length &&
             dragonData.map((dragon) => (
-              <ImageListItem key={dragon.id}>
+              <ImageListItem
+                key={dragon.id}
+                style={{
+                  width: "600px",
+                  height: "600px",
+                }}
+              >
                 <img
                   src={`${dragon.flickr_images[0]}?w=248&fit=crop&auto=format`}
                   srcSet={`${dragon.flickr_images[0]}?w=248&fit=crop&auto=format&dpr=2 2x`}

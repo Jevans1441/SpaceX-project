@@ -11,18 +11,24 @@ const Crew = () => {
       {
         <ImageList
           style={{
-            margin: "auto",
-            width: "60vh",
-            // overflow: "hidden",
-            marginTop: "20px",
-            paddingBottom: "30px",
-            height: "88vh",
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
             textDecoration: "none",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "86vh",
           }}
         >
           {crewData.length &&
             crewData.map((crew) => (
-              <ImageListItem key={crew.id}>
+              <ImageListItem
+                key={crew.id}
+                style={{
+                  width: "300px",
+                  height: "500px",
+                }}
+              >
                 <img
                   src={`${crew.image}?w=248&fit=crop&auto=format`}
                   srcSet={`${crew.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
