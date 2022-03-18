@@ -4,12 +4,6 @@ import { getRockets } from "../redux/actions";
 import { getCrew } from "../redux/actions";
 import { getDragons } from "../redux/actions";
 import { getHome } from "../redux/actions";
-import { Route, Routes } from "react-router-dom";
-import Crew from "../components/crew";
-import Rockets from "../components/rockets";
-import Home from "../components/home";
-import Dragons from "../components/dragons";
-import Rocket from "../components/rocket";
 
 const Landing = () => {
   const dispatch = useDispatch();
@@ -57,27 +51,7 @@ const Landing = () => {
 
   return (
     <>
-      {rocketsData.length &&
-        rocketsData.map((rocket) => (
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="Crew" element={<Crew />} />
-            <Route path="Dragons" element={<Dragons />} />
-            <Route path="Rockets" element={<Rockets />}>
-              {selectedRocket && (
-                <Route
-                  path={`./${rocket.name.replace(/ /g, "")}`}
-                  element={
-                    <Rocket
-                      action={handleClick}
-                      selectedRocket={selectedRocket}
-                    />
-                  }
-                />
-              )}
-            </Route>
-          </Routes>
-        ))}
+      <p>Welcome to the home page</p>
     </>
   );
 };

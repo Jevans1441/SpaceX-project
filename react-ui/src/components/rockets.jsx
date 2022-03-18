@@ -2,8 +2,7 @@ import { useSelector } from "react-redux";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
-import { NavLink } from "react-router-dom";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Rockets = () => {
   const rocketData = useSelector((state) => state.rocket);
@@ -39,7 +38,10 @@ const Rockets = () => {
                   alt={rocket.name}
                   loading="lazy"
                 />
-                <NavLink to={`./${rocket.name.replace(/ /g, "")}`}>
+                {/* because this link is clicked from a page that has 'Rockets/all' in the URL */}
+                {/* we have to give an absolute path, otherwise this would go to 'Rockets/all/Falcon1' */}
+                {/* but with an absolute path, it goes to Rockets/Falcon1 */}
+                <NavLink to={`/Rockets/${rocket.name.replace(/ /g, "")}`}>
                   <ImageListItemBar
                     style={{ textAlign: "center", color: "white" }}
                     title={rocket.name}
