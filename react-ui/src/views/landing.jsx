@@ -14,16 +14,30 @@ import Rocket from "../components/rocket";
 const Landing = () => {
   const dispatch = useDispatch();
   const [selectedRocket, setSelectedRocket] = useState(null);
-  const [rockets, setRockets] = useState();
+  const [rockets, setRockets] = useState([]);
 
   const handleClick = (e) => {
     const targetId = e.target.id;
     const selectedRocket = rockets.filter((rocket) => {
-      return rocket.name === targetId;
+      return rocket.id === targetId;
     });
 
-    setSelectedRocket(selectedRocket);
+    setSelectedRocket(selectedRocket[0]);
   };
+
+  useEffect(() => {
+    fetchRockets();
+  }, []);
+
+  const fetchRockets = () => {
+    fetch("https://api.spacexdata.com/v4/rockets")
+      .then((data) => data.json())
+      .then((response) => {
+        setRockets(response);
+      });
+  };
+
+  const rocketsData = useSelector((state) => state.rocket);
 
   useEffect(() => {
     dispatch(getCrew());
@@ -43,21 +57,27 @@ const Landing = () => {
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="Crew" element={<Crew />} />
-        <Route path="Dragons" element={<Dragons />} />
-        <Route path="Rockets" element={<Rockets />}>
-          {selectedRocket && (
-            <Route
-              path={`./${Rocket.name.replace(/ /g, "")}`}
-              element={
-                <Rocket action={handleClick} selectedRocket={selectedRocket} />
-              }
-            />
-          )}
-        </Route>
-      </Routes>
+      {rocketsData.length &&
+        rocketsData.map((rocket) => (
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="Crew" element={<Crew />} />
+            <Route path="Dragons" element={<Dragons />} />
+            <Route path="Rockets" element={<Rockets />}>
+              {selectedRocket && (
+                <Route
+                  path={`./${rocket.name.replace(/ /g, "")}`}
+                  element={
+                    <Rocket
+                      action={handleClick}
+                      selectedRocket={selectedRocket}
+                    />
+                  }
+                />
+              )}
+            </Route>
+          </Routes>
+        ))}
     </>
   );
 };

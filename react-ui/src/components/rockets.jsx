@@ -3,6 +3,7 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import { NavLink } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const Rockets = () => {
   const rocketData = useSelector((state) => state.rocket);
@@ -49,6 +50,7 @@ const Rockets = () => {
             ))}
         </ImageList>
       }
+      <Outlet />
     </>
   );
 };

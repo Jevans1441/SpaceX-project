@@ -1,5 +1,9 @@
 const Rocket = () => {
-  return <>HELLO</>;
+  return (
+    <>
+      <div>HELLO WORLD</div>
+    </>
+  );
 };
 
 export default Rocket;

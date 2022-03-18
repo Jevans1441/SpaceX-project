@@ -12,5 +12,5 @@ server.get("*", (req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`The server is lsitening at http://localhost:${PORT}.`);
+  console.log(`The server is listening at http://localhost:${PORT}.`);
 });
