@@ -2,6 +2,7 @@ import { GET_ROCKETS } from "./actionTypes";
 import { GET_CREW } from "./actionTypes";
 import { GET_DRAGONS } from "./actionTypes";
 import { GET_HOME } from "./actionTypes";
+import { SET_SINGLE_ROCKET } from "./actionTypes";
 
 export const getRockets = () => (dispatch) => {
   fetch("https://api.spacexdata.com/v4/rockets")
@@ -60,5 +61,12 @@ const fetchHome = (home) => {
   return {
     type: GET_HOME,
     home,
+  };
+};
+
+export const setIndividualRocket = (singleRocket) => {
+  return {
+    type: SET_SINGLE_ROCKET,
+    singleRocket,
   };
 };
