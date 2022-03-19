@@ -41,7 +41,10 @@ const Rockets = () => {
                 />
                 <NavLink to={`./${rocket.name.replace(/ /g, "")}`}>
                   <ImageListItemBar
-                    style={{ textAlign: "center", color: "white" }}
+                    style={{
+                      textAlign: "center",
+                      color: "white",
+                    }}
                     title={rocket.name}
                     position="below"
                   />

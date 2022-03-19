@@ -38,15 +38,15 @@ const Rocket = () => {
         margin: "auto",
       }}
     >
-      <a
-        href={singleRocket[0].wikipedia}
-        style={{
-          textDecoration: "none",
-          color: "#A7A9AC",
-          fontSize: "2rem",
-        }}
-      >
-        {singleRocket.length > 0 && (
+      {singleRocket.length > 0 && (
+        <a
+          href={singleRocket[0].wikipedia}
+          style={{
+            textDecoration: "none",
+            color: "#A7A9AC",
+            fontSize: "2rem",
+          }}
+        >
           <CardActionArea>
             <CardMedia
               component="img"
@@ -63,8 +63,8 @@ const Rocket = () => {
               </Typography>
             </CardContent>
           </CardActionArea>
-        )}
-      </a>
+        </a>
+      )}
     </Card>
   );
 };
