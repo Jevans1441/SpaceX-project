@@ -12,6 +12,8 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
+import CardMedia from "@mui/material/CardMedia";
+import spaceXLogo from "../images/logo.svg";
 
 const pages = ["Rockets", "Crew", "Dragons"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -57,7 +59,12 @@ const NavBar = () => {
             }}
           >
             <Link to={`/`} style={{ textDecoration: "none", color: "#A7A9AC" }}>
-              SpaceX
+              <CardMedia
+                style={{ height: "40px", width: "auto", margin: "auto" }}
+                component="img"
+                src={spaceXLogo}
+                title="logo"
+              />
             </Link>
           </Typography>
           <Box
@@ -118,7 +125,12 @@ const NavBar = () => {
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
             <Link to={`/`} style={{ textDecoration: "none", color: "#A7A9AC" }}>
-              SpaceX
+              <CardMedia
+                style={{ height: "40px", width: "auto", margin: "auto" }}
+                component="img"
+                src={spaceXLogo}
+                title="logo"
+              />
             </Link>
           </Typography>
           <Box
