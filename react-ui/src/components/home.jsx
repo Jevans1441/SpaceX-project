@@ -32,7 +32,7 @@ const Home = () => {
           {homeData.name} was founded by {homeData.founder} in{" "}
           {homeData.founded}
         </Typography>
-        <Typography variant="body2">Website links go here</Typography>
+        {/* <Typography variant="body2">Website links go here</Typography> */}
       </CardContent>
     </React.Fragment>
   );
